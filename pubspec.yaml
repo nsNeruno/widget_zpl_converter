@@ -1,7 +1,7 @@
 name: widget_zpl_converter
 description: A new Flutter package project.
 version: 1.0.0
-# repository: 
+repository: https://github.com/Zeyad-Alo/widget_zpl_converter
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
