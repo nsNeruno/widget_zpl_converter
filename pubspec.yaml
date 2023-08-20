@@ -1,5 +1,5 @@
 name: widget_zpl_converter
-description: A widget-to-ZPL command converter for thermal printing.
+description: The `widget_zpl_converter` package helps convert any Flutter widget to a ZPL/ZPL2 command. This is mainly targeted towards developers who need to print **labels** using thermal printers.
 version: 1.0.0
 repository: https://github.com/Zeyad-Alo/widget_zpl_converter
 

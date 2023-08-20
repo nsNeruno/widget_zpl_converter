@@ -22,7 +22,7 @@ Then, import the package in your Dart code:
 import 'package:widget_zpl_converter/widget_zpl_converter.dart';
 ```
 
-Create a widget that you want to convert to a ZPL/ZPL2 command:
+Create a widget that you want to convert to a ZPL/ZPL2 printing command:
 ```
 final myWidget = Container(
   width: 100,
