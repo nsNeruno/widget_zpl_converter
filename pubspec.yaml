@@ -1,5 +1,5 @@
 name: widget_zpl_converter
-description: A new Flutter package project.
+description: A widget-to-ZPL command converter for thermal printing.
 version: 1.0.0
 repository: https://github.com/Zeyad-Alo/widget_zpl_converter
 
