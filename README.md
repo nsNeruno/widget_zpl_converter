@@ -1,39 +1,42 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Widget ZPL Converter
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+The `widget_zpl_converter` package helps convert any Flutter widget to a ZPL/ZPL2 command. This is mainly targeted towards developers who need to print **labels** using thermal printers.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+- Convert any Flutter widget to a ZPL/ZPL2 command.
+- ZPL/ZPL2 command can be sent to a thermal printer using [esc_pos_utils](https://pub.dev/packages/esc_pos_utils)'s [Generator.rawBytes()](https://pub.dev/documentation/esc_pos_utils/latest/esc_pos_utils/Generator/rawBytes.html) method, or any other packages with similar functionality.
+- Supports variable widget sizes (while maintaining aspect ratio).
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+To use this package, simply add `widget_zpl_converter` as a dependency in your `pubspec.yaml` file:
 
-```dart
-const like = 'sample';
+```
+dependencies:
+  widget_zpl_converter: ^1.0.0
 ```
 
-## Additional information
+Then, import the package in your Dart code:
+```
+import 'package:widget_zpl_converter/widget_zpl_converter.dart';
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+Create a widget that you want to convert to a ZPL/ZPL2 command:
+```
+final myWidget = Container(
+  width: 100,
+  height: 100,
+  color: Colors.blue,
+);
+```
+
+Create a `ZplConverter` object and pass the widget to the constructor:
+```
+final zplConverter = ZplConverter(myWidget);
+```
+
+You can then use the toZpl() method to convert any Flutter widget to a ZPL/ZPL2 command:
+```
+final zplCommand = zplConverter.toZpl();
+```
